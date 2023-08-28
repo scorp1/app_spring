@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Good Thymes Virtual Grocery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Questions list</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Вопросы</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="q, iterStat : ${questions}"
+        th:style="${iterStat.odd}? 'font-weight: bold;'">
+        <td th:text="${iterStat.index}+1"></td>
+        <td th:text="${q.question}"></td>
+    </tr>
+    </tbody>
+</table>
+<p>
+    <a href="../index.html" th:href="@{/}">Return to home</a>
+</p>
+</body>
+</html>
