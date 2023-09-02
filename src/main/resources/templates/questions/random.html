@@ -1,0 +1,16 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Good Thymes Virtual Grocery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Random Questions</h1>
+<ul>
+    <li th:each="question : ${questions}" th:text="${question}"></li>
+</ul>
+
+<p>
+    <a href="../index.html" th:href="@{/}">Return to home</a>
+</p>
+</body>
+</html>

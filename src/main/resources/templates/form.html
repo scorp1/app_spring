@@ -1,0 +1,20 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Good Thymes Virtual Grocery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h2>Add question </h2>
+<form th:object="${form}" th:action="@{/questions/save}" method="post">
+    <label>Выберите тему:</label>
+    <select th:field="*{options}">
+        <option th:each="topic : ${form.options}" th:value="${topic.topicId}" th:text="${topic.topicName}"></option>
+    </select>
+    <label>Вопрос: <input type="text" th:field="*{question}" /></label><br/>
+    <input type="submit" value="Submit" />
+</form>
+<p>
+    <a href="../index.html" th:href="@{/}">Return to home</a>
+</p>
+</body>
+</html>

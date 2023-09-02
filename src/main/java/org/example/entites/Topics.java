@@ -6,12 +6,12 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
 @Data
-@Table(schema = "public", name = "questions")
-public class QuestionsModel {
+@Entity
+@Table(schema = "public", name = "java_topics")
+public class Topics {
     @Id
-    private Integer questionId;
-    private String question;
     private Integer topicId;
+    private String topicName;
 }
+

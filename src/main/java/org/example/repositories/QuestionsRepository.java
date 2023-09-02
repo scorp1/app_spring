@@ -1,13 +1,13 @@
 package org.example.repositories;
 
-import org.example.entites.QuestionsModel;
+import org.example.entites.Questions;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface QuestionsRepository extends JpaRepository<QuestionsModel, Integer> {
-    List<QuestionsModel> findAll();
+public interface QuestionsRepository extends JpaRepository<Questions, Integer> {
+    List<Questions> findAll();
 
-    List<QuestionsModel> findByTopicId(Integer topicId);
+    List<Questions> findByTopicId(Integer topicId);
 }
